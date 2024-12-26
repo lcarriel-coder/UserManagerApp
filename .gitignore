@@ -1,0 +1,22 @@
+## Ignorar archivos y carpetas de Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.obj
+*.exe
+*.dll
+*.log
+*.vscode/
+
+## Ignorar carpetas de compilación
+bin/
+obj/
+Debug/
+Release/
+
+## Ignorar archivos de paquetes
+*.nuget/
+packages/
+node_modules/
