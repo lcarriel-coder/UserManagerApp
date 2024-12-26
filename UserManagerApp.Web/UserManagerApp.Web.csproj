@@ -21,4 +21,8 @@
     <ProjectReference Include="..\UserManagerApp.Services\UserManagerApp.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
+  </ItemGroup>
+
 </Project>
