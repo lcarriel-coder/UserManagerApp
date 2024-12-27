@@ -29,7 +29,7 @@ Esta es una aplicación desarrollada con .NET 8 y Angular 18. A continuación, s
 
 ### Frontend (Angular)
 
-1. **Dirigirse al directorio ClientApp**:
+1. **Dirigirse al directorio ClientApp dentro de UserManagerApp.Web**:
     ```bash
     cd ClientApp
     ```
