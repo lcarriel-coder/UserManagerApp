@@ -39,6 +39,10 @@ Esta es una aplicación desarrollada con .NET 8 y Angular 18. A continuación, s
     ng serve
     ```
 
+3. **Abrir el navegador**:
+
+   Una vez que el servidor de desarrollo esté en funcionamiento, abre tu navegador preferido y navega a: http://localhost:4200
+
 
 
 ## Funcionalidades
