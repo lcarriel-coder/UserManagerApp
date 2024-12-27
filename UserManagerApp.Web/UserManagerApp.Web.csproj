@@ -6,6 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ClientApp\**" />
+    <Content Remove="ClientApp\**" />
+    <EmbeddedResource Remove="ClientApp\**" />
+    <None Remove="ClientApp\**" />
+  </ItemGroup>
+
 
 
   <ItemGroup>
@@ -21,10 +28,6 @@
     <ProjectReference Include="..\UserManagerApp.Infrastructure\UserManagerApp.Infrastructure.csproj" />
     <ProjectReference Include="..\UserManagerApp.Security\UserManagerApp.Security.csproj" />
     <ProjectReference Include="..\UserManagerApp.Services\UserManagerApp.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\" />
   </ItemGroup>
  
 
