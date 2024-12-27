@@ -1,6 +1,16 @@
-# Aplicación .NET 8 con Angular
+# Aplicación .NET 8 y Angular 18
 
-Esta es una aplicación desarrollada con .NET 8 y Angular 18. A continuación, se detallan los pasos para la instalación y configuración.
+Esta es una aplicación desarrollada con **.NET 8** para el backend y **Angular 18** para el frontend. Utiliza diversas tecnologías modernas para proporcionar una experiencia robusta y eficiente.
+
+## Tecnologías utilizadas
+
+- **.NET 8**: Framework para el desarrollo del backend.
+- **Entity Framework Core**: ORM utilizado para la gestión de la base de datos.
+- **SQL Server**: Sistema de gestión de bases de datos relacional.
+- **Angular 18**: Framework para el desarrollo del frontend.
+- **TypeScript**: Lenguaje utilizado en el desarrollo del frontend con Angular.
+- **Bootstrap**: Framework de CSS para diseño responsivo y estilos predefinidos.
+
 
 ## Pasos de Instalación
 
