@@ -50,6 +50,10 @@ Esta es una aplicación desarrollada con .NET 8 y Angular 18. A continuación, s
 
 ## Imagenes
 ![Crear persona](https://github.com/lcarriel-coder/UserManagerApp/blob/main/imagenes/Crear.png?raw=true)
+![Lista personas](https://github.com/lcarriel-coder/UserManagerApp/blob/main/imagenes/Personas.png?raw=true)
+![Login JWT](https://github.com/lcarriel-coder/UserManagerApp/blob/main/imagenes/login.png?raw=true)
+
+
 
 
 
