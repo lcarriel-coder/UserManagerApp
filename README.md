@@ -49,5 +49,9 @@ Esta es una aplicación desarrollada con .NET 8 y Angular 18. A continuación, s
 
 
 ## Imagenes
+![Crear persona]([Images/api_running.png](https://github.com/lcarriel-coder/UserManagerApp/blob/main/imagenes/Crear.png?raw=true))
+
+
+
 
 ¡Y eso es todo! Con estos pasos, deberías tener tu aplicación .NET 8 con Angular funcionando correctamente.
