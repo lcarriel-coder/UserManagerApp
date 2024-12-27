@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationService } from './services/notification.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+   // NotificationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

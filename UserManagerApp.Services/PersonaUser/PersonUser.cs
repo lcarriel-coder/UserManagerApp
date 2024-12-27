@@ -89,7 +89,31 @@ namespace UserManagerApp.Services.PersonaUser
                 }
             }
         }
+
+
+        public List<PersonUserDto> GetAllPersons()
+        {
+            // Ejecuta el procedimiento almacenado y luego realiza la proyección en memoria
+            return dbContext.Persons
+                .FromSqlRaw("EXEC GetAllPersons")
+                .AsEnumerable()  // Realiza la proyección en memoria (en el cliente)
+                .Select(person => new PersonUserDto
+                {
+                    FirstName = person.FirstName,
+                    LastName = person.LastName,
+                    Identification = person.Identification,
+                    Email = person.Email,
+                    IdentificationType = person.IdentificationType
+                })
+                .ToList();
+        }
+
+
+
     }
+
+
+
 
 
 

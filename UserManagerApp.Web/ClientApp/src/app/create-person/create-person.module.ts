@@ -6,9 +6,10 @@ import { CreatePersonComponent } from './create-person.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
-    CreatePersonComponent
+    CreatePersonComponent,
   ],
   imports: [
     CommonModule,

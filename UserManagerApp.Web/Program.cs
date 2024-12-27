@@ -23,24 +23,15 @@ builder.Services.AddIdentity<User, IdentityRole>()
 
 
 
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//})
-//.AddJwtBearer(options =>
-//{
-//    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-//    {
-//        ValidateIssuer = true,
-//        ValidateAudience = true,
-//        ValidateLifetime = true,
-//        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//        ValidAudience = builder.Configuration["Jwt:Audience"],
-//        IssuerSigningKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
-//    };
-//});
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularOrigins", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")  
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("seguridad-prevenir-palabra-secreta-12345"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
@@ -59,6 +50,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 
 var app = builder.Build();
 
+
+app.UseCors("AllowAngularOrigins");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

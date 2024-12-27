@@ -1,11 +1,145 @@
-<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Name:</label>
-    <input id="name" formControlName="name">
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()" class="needs-validation mb-5" novalidate>
+
+  <div class="row">
+
+    <div class="col-md-12 mt-3">
+
+      <h2> Crear persona </h2>
+
+    </div>
+
+
+    <div class="col-md-12 mt-4">
+
+      <h4> Datos generales </h4>
+      <hr />
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="firstName" class="form-label">First Name:</label>
+      <input
+        id="firstName"
+        formControlName="firstName"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('firstName') }"
+      />
+      <div *ngIf="getFieldError('firstName')" class="invalid-feedback">
+        {{ getFieldError('firstName') }}
+      </div>
+    </div>
+
+
+    <div class="col-md-6  mb-3">
+      <label for="lastName" class="form-label">Last Name:</label>
+      <input
+        id="lastName"
+        formControlName="lastName"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('lastName') }"
+      />
+      <div *ngIf="getFieldError('lastName')" class="invalid-feedback">
+        {{ getFieldError('lastName') }}
+      </div>
+    </div>
+
+    <div class="col-md-6  mb-3">
+      <label for="identificationType" class="form-label">Identification Type:</label>
+      <select
+        id="identificationType"
+        formControlName="identificationType"
+        class="form-select"
+        [ngClass]="{ 'is-invalid': isValidField('identificationType') }"
+      >
+        <option value="" disabled>Select </option>
+        <option value="cedula">Cédula</option>
+        <option value="ruc">RUC</option>
+      </select>
+      <div *ngIf="getFieldError('identificationType')" class="invalid-feedback">
+        {{ getFieldError('identificationType') }}
+      </div>
+    </div>
+
+
+    <div class="col-md-6  mb-3">
+      <label for="identification" class="form-label">Identification:</label>
+      <input
+        id="identification"
+        formControlName="identification"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('identification') }"
+      />
+      <div *ngIf="getFieldError('identification')" class="invalid-feedback">
+        {{ getFieldError('identification') }}
+      </div>
+    </div>
+
+
+    <div class="col-md-6 mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('email') }"
+      />
+      <div *ngIf="getFieldError('email')" class="invalid-feedback">
+        {{ getFieldError('email') }}
+      </div>
+    </div>
+
+
+    <div class="col-md-12 mt-4">
+
+      <h4> Datos para el login </h4>
+      <hr />
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="userName" class="form-label">User Name:</label>
+      <input
+        id="userName"
+        formControlName="userName"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('userName') }"
+      />
+      <div *ngIf="getFieldError('userName')" class="invalid-feedback">
+        {{ getFieldError('userName') }}
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="password" class="form-label">Password:</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': isValidField('password') }"
+      />
+      <div *ngIf="getFieldError('password')" class="invalid-feedback">
+        {{ getFieldError('password') }}
+      </div>
+    </div>
+
+
   </div>
-  <div>
-    <label for="age">Age:</label>
-    <input id="age" type="number" formControlName="age">
-  </div>
-  <button type="submit" [disabled]="personForm.invalid">Create</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button type="submit" class="btn btn-primary" [disabled]="personForm.invalid">Crear</button>
 </form>
+
+
+
+

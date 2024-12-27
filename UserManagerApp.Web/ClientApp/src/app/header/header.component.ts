@@ -1,6 +1,5 @@
-// src/app/header/header.component.ts
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';  // Importa el servicio
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +8,16 @@ import { AuthService } from '../services/auth.service';  // Importa el servicio
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isLoggedIn: boolean = false;
+  userName: string | null = null;
 
   constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-    this.isLoggedIn = this.authService.isLoggedIn(); // Verifica si el usuario está logueado
+  ngOnInit(): void {
+    this.userName = this.authService.getUserName(); // Obtener el nombre del usuario
+  }
+
+  logout() {
+    this.authService.logout(); // Cerrar sesión
+    this.userName = null; // Limpiar el nombre del usuario en el header
   }
 }

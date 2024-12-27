@@ -11,5 +11,6 @@ namespace UserManagerApp.Services.PersonaUser
     public interface IPersonUser
     {
         Task<OperationResult> RegisterPersonUser(RegisterPersonUserDto data);
+        List<PersonUserDto> GetAllPersons();
     }
 }

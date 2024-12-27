@@ -9,6 +9,8 @@ using UserManagerApp.Services.User.DTO;
 
 namespace UserManagerApp.Web.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
         private readonly IAccountService accountService;

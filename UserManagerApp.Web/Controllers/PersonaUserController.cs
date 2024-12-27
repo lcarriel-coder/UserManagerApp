@@ -29,5 +29,12 @@ namespace UserManagerApp.Web.Controllers
             return Ok(new { message = "User registered successfully!" });
         }
 
+        [HttpGet("GetAll")]
+        public IActionResult GetAllPersons()
+        {
+            var persons = personUserService.GetAllPersons();
+            return Ok(persons);
+        }
+
     }
 }
